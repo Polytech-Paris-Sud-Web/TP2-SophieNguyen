@@ -23,6 +23,7 @@ I didn't know how to organize properly components for Articles page and homepage
 Now that we have a new `Author` interface related to `author` property of `Article`, I had to find a way to connect the author field input in creation form.
 The problem is, in database, the foreign key of this property is `authorId`. But in my `Article` interface, it's `author`.
 To solve that, I have created a new interface `ArticleCreation`, which matches with the definition in database. Instead of using `Article` when creating an new article, I use this one. I don't know if there is any better way...
+
 ---
 
 ## Commands
