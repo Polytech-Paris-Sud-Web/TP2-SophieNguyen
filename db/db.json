@@ -1,0 +1,93 @@
+{
+  "articles": [
+    {
+      "title": "Martin!! What are you doing?",
+      "content": "Hurry up! I need my article for tonight ASAP.",
+      "authorId": 1,
+      "publishedOn": "2022-05-18T15:01:15.511Z",
+      "id": 4
+    },
+    {
+      "title": "eeeee",
+      "content": "eeeeeeeeeeee",
+      "authorId": 2,
+      "publishedOn": "2022-05-18T15:52:57.589Z",
+      "id": 5
+    },
+    {
+      "title": "Somebody once told me the world is gonna roll me",
+      "content": "I ain’t the sharpest tool in the shed\nShe was looking kind of dumb with her finger and her thumb\nIn the shape of an “L” on her forehead",
+      "authorId": 2,
+      "publishedOn": "2022-05-18T15:53:28.206Z",
+      "id": 6
+    },
+    {
+      "title": "English homework",
+      "content": "Boring English homework won't miss me",
+      "authorId": 2,
+      "publishedOn": "2022-05-18T15:55:28.463Z",
+      "id": 7
+    },
+    {
+      "title": "Very serious article this time",
+      "content": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus nisi vitae nulla feugiat consectetur. Aenean fringilla arcu at lacus pharetra hendrerit. Vestibulum tincidunt, ipsum id bibendum lobortis, leo sapien sodales risus, non dignissim lorem leo nec sem. Aliquam luctus magna ut sapien congue rutrum. Fusce at sapien ipsum. Maecenas et rutrum lacus. Praesent bibendum, lacus vitae vestibulum facilisis, nibh mauris aliquam augue, vel blandit metus sapien a sem. Suspendisse accumsan mattis imperdiet. Maecenas sodales quam mi, ut laoreet ligula dignissim a. Praesent vitae blandit justo. Ut eu nisi ut nibh vulputate tempus eu eget nisi. Praesent pulvinar nisi id lorem scelerisque, vitae auctor libero fringilla. Quisque a turpis nulla. Donec finibus dapibus ipsum id fermentum. Morbi et convallis nulla. Quisque pulvinar ultricies erat maximus rutrum.\n\nVestibulum consectetur, lectus ac sollicitudin rhoncus, libero libero mattis mauris, dapibus viverra urna nisl id massa. Donec turpis velit, facilisis vitae neque nec, ultricies luctus tortor. Cras et enim vel sem pellentesque laoreet at id lectus. Phasellus aliquet aliquam convallis. Donec ac nisi mattis, sodales justo ut, blandit arcu. Curabitur augue mauris, tempus a turpis vel, blandit sodales diam. Nunc hendrerit nunc ac libero euismod, in lobortis metus rhoncus. Vestibulum a urna et urna porttitor ultricies ac ac felis. Vestibulum nec dolor tristique purus facilisis semper a vitae mauris. Quisque vel lacus ac mi sodales sodales. ",
+      "authorId": 1,
+      "publishedOn": "2022-05-18T15:57:25.537Z",
+      "id": 8
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus nisi vitae nulla feugiat consectetur. Aenean fringilla arcu at lacus pharetra hendrerit. Vestibulum tincidunt, ipsum id bibendum lobortis, leo sapien sodales risus, non dignissim lorem leo nec sem. Aliquam luctus magna ut sapien congue rutrum. Fusce at sapien ipsum. Maecenas et rutrum lacus. Praesent bibendum, lacus vitae vestibulum facilisis, nibh mauris aliquam augue, vel blandit metus sapien a sem. Suspendisse accumsan mattis imperdiet. Maecenas sodales quam mi, ut laoreet ligula dignissim a. Praesent vitae blandit justo. Ut eu nisi ut nibh vulputate tempus eu eget nisi. Praesent pulvinar nisi id lorem scelerisque, vitae auctor libero fringilla. Quisque a turpis nulla. Donec finibus dapibus ipsum id fermentum. Morbi et convallis nulla. Quisque pulvinar ultricies erat maximus rutrum. ",
+      "authorId": 1,
+      "publishedOn": "2022-05-18T16:01:34.373Z",
+      "id": 9
+    },
+    {
+      "title": "eeeeeee",
+      "content": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "authorId": 2,
+      "publishedOn": "2022-05-18T16:02:55.187Z",
+      "id": 10
+    },
+    {
+      "title": "eeeeeeeeeeeeee",
+      "content": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "authorId": 2,
+      "publishedOn": "2022-05-18T16:03:03.813Z",
+      "id": 11
+    },
+    {
+      "title": "eeeeee",
+      "content": "eeeeeeeeeeeeeeee",
+      "authorId": 2,
+      "publishedOn": "2022-05-18T16:03:17.368Z",
+      "id": 12
+    },
+    {
+      "title": "eeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "content": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "authorId": 2,
+      "publishedOn": "2022-05-18T16:03:28.861Z",
+      "id": 13
+    },
+    {
+      "title": "eeeeeeee",
+      "content": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "authorId": 1,
+      "publishedOn": "2022-05-18T16:03:45.867Z",
+      "id": 14
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Benedict Cucumberbatch",
+      "biography": "Benedict was a renowned investigator before becoming a doctor with magical and powerful powers. But he was so bored by Disney's greed  so that is why he became a journalist for some fictional blog."
+    },
+    {
+      "id": 2,
+      "name": "Martin Unfreeman",
+      "biography": "After helping Benedict Cucumberbatch during his investigations in England, he had decided to live as a survivalist in a small and hidden house, until some greyish magician knocked on his door. As being always nearly close to death was annoying him, he reconverted himself as a ghost writer for his best friend forever."
+    }
+  ]
+}
