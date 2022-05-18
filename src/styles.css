@@ -1,1 +1,112 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap');
+
+:root {
+  --dark: 15, 56, 15;
+  --secondaryDark: 48, 98, 48;
+  --secondary: 139, 172, 15;
+  --main: 155, 188, 15;
+  --light: 202, 220, 159;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(var(--light));
+  color: rgb(var(--dark));
+  font-family: "Fira Code", monospace;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 10px 0;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: rgb(var(--secondary));
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button {
+  border-radius: 5px;
+  box-shadow: 3px 3px 0 rgb(var(--main));
+  text-transform: uppercase;
+  padding: 5px;
+  background-color: rgb(var(--dark));
+  color: rgb(var(--main));
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+button:focus, button:hover {
+  box-shadow: 0 0 0 rgb(var(--dark));
+}
+
+button:focus {
+  background-color: rgb(var(--main));
+  border-color: rgb(var(--dark))!important;
+  color: rgb(var(--dark));
+}
+
+button:disabled {
+  opacity: 0.3;
+}
+
+.btn-single {
+  border: solid 4px rgb(var(--main))!important;
+  font-size: 20px;
+  margin: 10px auto;
+  display: block;
+}
+
+.btn-small {
+  border: solid 3px rgb(var(--main));
+}
+
+.page-content {
+  padding: 0 10px;
+}
+
+/** Article and author biography content */
+.content {
+  text-align: justify;
+  white-space: pre-line;
+}
+
+/** Simple links */
+.link {
+  color: rgb(var(--light));
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: rgb(var(--main));
+}
+
+.link:before {
+  content: "[";
+}
+
+.link:after {
+  content: "]";
+}
+
+/** Form */
+input, textarea, select {
+  color: rgb(var(--dark));
+  background-color: transparent;
+  padding: 5px;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  border: 1px rgb(var(--dark)) solid;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}

@@ -1,0 +1,8 @@
+<div class="page-content">
+  <div *ngIf="author; else missing">
+    <h2>Who dis?!</h2>
+    <h3>{{ author.name }}</h3>
+    <div class="content">{{ author.biography }}</div>
+  </div>
+  <ng-template #missing>No author found! So sad...</ng-template>
+</div>

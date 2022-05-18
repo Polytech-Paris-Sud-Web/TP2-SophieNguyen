@@ -1,0 +1,12 @@
+<div class="page-content">
+  <h2>Home</h2>
+  <h3>Last 10 articles published</h3>
+    <ng-container *ngFor="let article of this.articles">
+      <app-article
+        [article]="article"
+        (deletedArticle)="fetchArticles()">
+      </app-article>
+    </ng-container>
+    <ng-container *ngIf="!this.articles.length">No articles published for now. Come back later!</ng-container>
+  <button routerLink="/create" class="btn-single">New article</button>
+</div>

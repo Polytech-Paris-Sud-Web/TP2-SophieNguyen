@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <li *ngFor="let link of this.links">
+      <a class="link" [ngClass]="isCurrent(link.path) ? 'current' : ''" [routerLink]="link.path">
+        {{ link.title }}
+      </a>
+    </li>
+  </ul>
+</nav>

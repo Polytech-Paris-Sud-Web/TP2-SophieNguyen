@@ -1,27 +1,46 @@
-# SimpleApp
+# TP1 - Advanced web development
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+I have helped Tom Mansion, Léandre Becq, Rémy Chagnas and Nathan Pinault.
+And these gentle guys helped me too!
+Also Alexis Da Costa helped me once.
 
-## Development server
+## Some remarks
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Homepage
 
-## Code scaffolding
+About the homepage, it was requested to show the last 10 articles published. I could do that in JavaScript directly by processing list of articles manually. But I'm not sure if it is scalable if we have a lot of items, so that's why the API does this for us instead.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Encountered difficulties
 
-## Build
+### List of articles
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+I didn't know how to organize properly components for Articles page and homepage as they both use the initial `Articles` component. I wanted to prevent repetition as possible.
+  - I saw that it was possible to use inheritance between components so I used it.
+  - So now we have the original `Articles` which is extended by `SearchableArticles` (with search by title feature) and `HomeArticles` (with 10 latest posts).
 
-## Running unit tests
+### Author page and article creation form
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Now that we have a new `Author` interface related to `author` property of `Article`, I had to find a way to connect the author field input in creation form.
+The problem is, in database, the foreign key of this property is `authorId`. But in my `Article` interface, it's `author`.
+To solve that, I have created a new interface `ArticleCreation`, which matches with the definition in database. Instead of using `Article` when creating an new article, I use this one. I don't know if there is any better way...
+---
 
-## Running end-to-end tests
+## Commands
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Run a server locally
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+By default, the app URL is set up on [http://localhost:4200](http://localhost:4200).
+
+### Run API server locally
+
+`baseUrl` in  `src/environnements/environment.ts` must match with the url used by the server.
+
+```bash
+json-server --watch db/db.json
+```
+
+You can visit and try routes on it on [http://localhost:3000](http://localhost:3000)

@@ -1,0 +1,15 @@
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul > li {
+  margin: 0 5px;
+}
+
+.current {
+  color: rgb(var(--main));
+}

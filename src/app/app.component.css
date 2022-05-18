@@ -1,0 +1,15 @@
+header {
+  background-color: rgb(var(--dark));
+  padding: 10px;
+  box-shadow: 0 5px 0 rgba(var(--dark), 0.3);
+  border: double rgb(var(--light)) 10px;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  text-align: center;
+  margin-top: 0;
+  font-weight: 700;
+  color: rgb(var(--main));
+  letter-spacing: 2px;
+}

@@ -1,0 +1,15 @@
+<div class="page-content">
+  <h2>Articles</h2>
+  <app-searchbar [(text)]="this.text"></app-searchbar>
+  <div
+    *ngIf="this.articles | filterByTitle:this.text as filteredArticles">
+    <ng-container *ngFor="let article of filteredArticles">
+      <app-article
+        [article]="article"
+        (deletedArticle)="fetchArticles()">
+      </app-article>
+    </ng-container>
+    <ng-container *ngIf="!filteredArticles.length">No articles found{{ this.text ? ' with this title' : '' }}!</ng-container>
+  </div>
+  <button routerLink="/create" class="btn-single">New Article</button>
+</div>
