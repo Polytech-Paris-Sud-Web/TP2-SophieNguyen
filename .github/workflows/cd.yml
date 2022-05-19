@@ -64,12 +64,21 @@ jobs:
 
       - name: Deploy to hosted server
         uses: appleboy/ssh-action@master
+        env:
+          REGISTRY: ${{ env.REGISTRY }}
+          CR_USERNAME: ${{ github.actor }}
+          CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           host: ${{secrets.REMOTE_HOST}}
           username: ${{secrets.REMOTE_USER}}
           password: ${{secrets.REMOTE_PASSWORD}}
           port: ${{secrets.REMOTE_PORT}}
+          envs: REGISTRY,CR_USERNAME,CR_TOKEN
           script: |
+            echo "Login to GitHub container registry..."
+            echo $CR_TOKEN >> password.txt
+            cat password.txt | docker login $CR_REGISTRY --username $CR_USERNAME --password-stdin
+            rm -f password.txt
             cd app
             docker compose down
             docker compose up -d --no-build
