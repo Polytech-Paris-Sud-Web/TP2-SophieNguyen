@@ -65,7 +65,6 @@ export class ArticleCreationComponent implements OnInit, OnDestroy {
 
     this.articleService.createArticle(article).subscribe({
       next: () => { alert("Article published successfully!"); this.router.navigate(['/articles']); },
-      error: err => console.error(err)
     });
   }
 

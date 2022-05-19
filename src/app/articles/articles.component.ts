@@ -33,9 +33,6 @@ export class ArticlesComponent implements OnInit {
       next: (data) => {
         this.articles = data;
       },
-      error: (error) => {
-        console.error(error);
-      },
     });
   }
 
