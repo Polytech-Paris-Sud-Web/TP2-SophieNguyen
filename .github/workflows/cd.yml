@@ -48,13 +48,13 @@ jobs:
     steps:
       - name: Copy Docker Compose configuration to remote
         uses: garygrossgarten/github-action-scp@release
-          with:
-            local: docker-compose.yml
-            remote: app/docker-compose.yml
-            host: ${{ secrets.REMOTE_HOST }}
-            username: ${{ secrets.REMOTE_USER }}
-            password: ${{ secrets.REMOTE_PASSWORD }}
-            port: ${{ secrets.REMOTE_PORT }}
+        with:
+          local: docker-compose.yml
+          remote: app/docker-compose.yml
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{ secrets.REMOTE_PASSWORD }}
+          port: ${{ secrets.REMOTE_PORT }}
 
       - name: Copy mocked database
           uses: garygrossgarten/github-action-scp@release
