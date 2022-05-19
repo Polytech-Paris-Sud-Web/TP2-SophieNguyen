@@ -2,7 +2,7 @@ version: "3.9"
 services:
   app:
     container_name: blog
-    image: ghcr.io/polytech-paris-sud-web/tp2-sophienguyen
+    image: ghcr.io/polytech-paris-sud-web/tp2-sophienguyen:master
     ports:
       - "80:80"
       - "443:443"
