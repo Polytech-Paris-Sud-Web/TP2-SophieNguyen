@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  app:
+    container_name: blog
+    build:
+      context: .
+    ports:
+      - "80:80"
+    restart: always
+  db:
+    image: clue/json-server
+    container_name: blog-db
+    volumes:
+      - ./db/db.json:/data/db.json
+    ports:
+      - "3000:80"
+    restart: always
