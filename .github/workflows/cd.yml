@@ -67,15 +67,13 @@ jobs:
           port: ${{ secrets.REMOTE_PORT }}
 
       - name: Deploy to hosted server
-        steps:
-          - name: Remote ssh
-            uses: appleboy/ssh-action@master
-            with:
-              host: ${{secrets.REMOTE_HOST}}
-              username: ${{secrets.REMOTE_USER}}
-              password: ${{secrets.REMOTE_PASSWORD}}
-              port: ${{secrets.REMOTE_PORT}}
-              script: |
-                cd app
-                docker compose down
-                docker compose up -d --no-build
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.REMOTE_HOST}}
+          username: ${{secrets.REMOTE_USER}}
+          password: ${{secrets.REMOTE_PASSWORD}}
+          port: ${{secrets.REMOTE_PORT}}
+          script: |
+            cd app
+            docker compose down
+            docker compose up -d --no-build
