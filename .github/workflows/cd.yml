@@ -41,21 +41,31 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
 
-#  deploy:
-#    name: Deploy to hosted server
-#    environment: production
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Remote ssh
-#        uses: appleboy/ssh-action@master
-#        with:
-#          host: ${{secrets.REMOTE_HOST}}
-#          username: ${{secrets.REMOTE_USER}}
-#          password: ${{secrets.REMOTE_PASSWORD}}
-#          port: ${{secrets.REMOTE_PORT}}
-#          script: |
-#            # TODO: Create app/ folder
-#            # TODO: Go to app/
-#            # TODO: Copy docker-compose.yml
-#            # TODO: Stop Compose
-#            # TODO: Start Compose
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Copy Docker Compose configuration to remote
+        uses: garygrossgarten/github-action-scp@release
+          with:
+            local: docker-compose.yml
+            remote: app/docker-compose.yml
+            host: ${{ secrets.REMOTE_HOST }}
+            username: ${{ secrets.REMOTE_USER }}
+            password: ${{ secrets.REMOTE_PASSWORD }}
+            port: ${{ secrets.REMOTE_PORT }}
+
+      - name: Deploy to hosted server
+        steps:
+          - name: Remote ssh
+            uses: appleboy/ssh-action@master
+            with:
+              host: ${{secrets.REMOTE_HOST}}
+              username: ${{secrets.REMOTE_USER}}
+              password: ${{secrets.REMOTE_PASSWORD}}
+              port: ${{secrets.REMOTE_PORT}}
+              script: |
+                cd app
+                docker compose down
+                docker compose up -d --no-build
