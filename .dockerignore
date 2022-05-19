@@ -3,6 +3,7 @@ node_modules
 dist
 
 db
+config
 
 .vscode
 .idea
@@ -14,6 +15,6 @@ db
 Dockerfile*
 docker-compose*
 
-README
+README.md
 
 npm-debug.log
