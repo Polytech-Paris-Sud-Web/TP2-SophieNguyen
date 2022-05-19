@@ -16,6 +16,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+    environment: production
 
     steps:
       - name: Checkout repository
@@ -51,7 +52,7 @@ jobs:
           password: ${{ secrets.REMOTE_PASSWORD }}
           port: ${{ secrets.REMOTE_PORT }}
 
-      - name: Copy mocked database
+      - name: Copy mocked database to remote
         uses: garygrossgarten/github-action-scp@release
         with:
           local: ./db/db.json
