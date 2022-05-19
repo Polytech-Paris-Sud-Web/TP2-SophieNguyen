@@ -3,6 +3,7 @@ import {Article} from "./article";
 import {ArticleService} from "../article.service";
 import {Router} from "@angular/router";
 import {Subscription} from "rxjs";
+import {Meta} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-article',
@@ -31,7 +32,7 @@ export class ArticleComponent implements OnInit, OnDestroy {
   @Output()
   deletedArticle: EventEmitter<any> = new EventEmitter();
 
-  constructor(private articleService: ArticleService, private router: Router) {
+  constructor(private articleService: ArticleService, private router: Router, private meta: Meta) {
   }
 
   ngOnInit(): void {
@@ -40,6 +41,11 @@ export class ArticleComponent implements OnInit, OnDestroy {
     const id = Number(/^\/articles\/(\d+)(?<!\D)$/g.exec(this.router.url)?.[1]);
     if (id) {
       this.fetch(id);
+
+      this.meta.addTag({
+        name: this.article?.title,
+        description: ""
+      });
     }
   }
 
