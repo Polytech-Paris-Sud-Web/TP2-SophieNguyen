@@ -31,4 +31,3 @@ services:
       - blog-network
 networks:
   blog-network:
-    driver: bridge
