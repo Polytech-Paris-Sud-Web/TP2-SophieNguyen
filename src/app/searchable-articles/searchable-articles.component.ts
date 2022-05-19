@@ -21,7 +21,7 @@ export class SearchableArticlesComponent extends ArticlesComponent {
 
     this.meta.updateTag({
         name: "description",
-        description: "All articles published so far by our talented contributors.",
+        content: "All articles published so far by our talented contributors.",
       });
   }
 

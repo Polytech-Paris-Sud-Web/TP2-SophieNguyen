@@ -34,7 +34,7 @@ export class AuthorComponent implements OnInit, OnDestroy {
   updateTag(): void {
     this.meta.updateTag({
       name: "description",
-      description: this.author ? (this.author.biography.length > 250 ? this.author.biography.substring(0, 250) + "..." : this.author.biography)
+      content: this.author ? (this.author.biography.length > 250 ? this.author.biography.substring(0, 250) + "..." : this.author.biography)
         : "It seems like your author is missing."
     });
   }

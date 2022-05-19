@@ -21,7 +21,7 @@ export class HomeArticlesComponent extends ArticlesComponent implements OnInit {
 
     this.meta.updateTag({
         name: "description",
-        description: "This blog is not about SharePoint, a famous web-based collaborative platform developed by Microsoft, unfortunately. " +
+        content: "This blog is not about SharePoint, a famous web-based collaborative platform developed by Microsoft, unfortunately. " +
           "No charged and dubious training either.",
       });
   }

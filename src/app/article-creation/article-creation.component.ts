@@ -42,7 +42,7 @@ export class ArticleCreationComponent implements OnInit, OnDestroy {
 
     this.meta.updateTag({
       name: "description",
-      description: "Write an article full of interesting facts about the life with our form"
+      content: "Write an article full of interesting facts about the life with our form"
     });
   }
 

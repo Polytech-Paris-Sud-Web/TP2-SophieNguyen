@@ -58,7 +58,7 @@ export class ArticleComponent implements OnInit, OnDestroy {
 
     this.meta.updateTag({
       name: "description",
-      description: this.article ? (this.article.content.length > 250 ? this.article.content.substring(0, 250) + "..." : this.article.content)
+      content: this.article ? (this.article.content.length > 250 ? this.article.content.substring(0, 250) + "..." : this.article.content)
         : "Your article does not exist anywhere..."
     });
   }
