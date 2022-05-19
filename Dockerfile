@@ -10,7 +10,7 @@ RUN npm ci
 
 # Copy app
 COPY . .
-RUN npm run build -- --prod
+RUN npm run build
 
 # Production stage
 FROM nginx:stable-alpine as production-stage
