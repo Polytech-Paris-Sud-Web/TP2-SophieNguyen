@@ -1,4 +1,4 @@
-name: Continuous Deployment
+name: Publish Docker image and continuous deployment
 
 on:
   push:
