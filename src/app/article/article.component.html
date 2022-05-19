@@ -1,13 +1,13 @@
 <div class="article" *ngIf="!isReadonly(); else readonly">
   <ng-container *ngIf="article">
     <span class="header">
-    <h3>{{ article.title }}</h3>
-    <span class="info">by <a class="author-link" [routerLink]="'/authors/' + article.author.id">{{ article.author.name }}</a> on {{ article.publishedOn | date: 'medium' }}</span>
-  </span>
+      <h3>{{ article.title }}</h3>
+     <span class="info">by <a class="author-link" [routerLink]="'/authors/' + article.author.id">{{ article.author.name }}</a> on {{ article.publishedOn | date: 'medium' }}</span>
+    </span>
     <div class="content"> {{ article.content }} </div>
     <div class="footer">
       <a class="link" [routerLink]="'/articles/' + article.id">Read</a>
-      <a class="link" (click)="delete()">Remove</a>
+      <span class="link" (click)="delete()">Remove</span>
     </div>
   </ng-container>
 </div>

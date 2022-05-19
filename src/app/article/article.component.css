@@ -48,10 +48,7 @@
   margin: 0;
 }
 
-.author-link {
-  color: rgb(var(--secondary));
-}
-
 .author-link:hover {
   background-color: rgb(var(--secondaryDark));
+  color: rgb(var(--main));
 }

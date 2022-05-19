@@ -6,9 +6,23 @@ nav ul {
   padding: 0;
 }
 
-nav ul > li {
-  margin: 0 5px;
+@media screen and (max-width: 480px) {
+  nav ul {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  nav ul > li {
+    margin: 10px 5px;
+  }
 }
+
+@media screen and (min-width: 480px) {
+  nav ul > li {
+    margin: 0 5px;
+  }
+}
+
 
 .current {
   color: rgb(var(--main));

@@ -3,7 +3,7 @@
 :root {
   --dark: 15, 56, 15;
   --secondaryDark: 48, 98, 48;
-  --secondary: 139, 172, 15;
+  --secondary: 139, 165, 14;
   --main: 155, 188, 15;
   --light: 202, 220, 159;
 }
@@ -26,6 +26,7 @@ h2 {
 
 a {
   font-weight: bold;
+  color: rgb(var(--secondaryDark));
   text-decoration: none;
 }
 
@@ -71,6 +72,16 @@ button:disabled {
   padding: 0 10px;
 }
 
+.page-content h2 {
+  color: rgb(var(--main));
+  border-radius: 5px;
+  outline: 3px solid rgb(var(--secondaryDark));
+  border: 2px solid rgb(var(--main));
+  background-color: rgb(var(--secondaryDark));
+  padding: 5px;
+  display: block;
+}
+
 /** Article and author biography content */
 .content {
   text-align: justify;
@@ -79,6 +90,7 @@ button:disabled {
 
 /** Simple links */
 .link {
+  font-weight: bold;
   color: rgb(var(--light));
   text-decoration: none;
   cursor: pointer;
