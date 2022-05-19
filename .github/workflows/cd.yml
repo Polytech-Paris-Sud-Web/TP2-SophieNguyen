@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - feature/add-cd # TODO: Temporary
 
 env:
   REGISTRY: ghcr.io

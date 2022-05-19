@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master, feature/add-cd ] # TODO: Remove temporary branch
+    branches: [ master ]
   pull_request:
-    branches: [ master, feature/add-cd ] # TODO: Remove temporary branch
+    branches: [ master ]
 env:
   node-version: 16.15.0
 jobs:
