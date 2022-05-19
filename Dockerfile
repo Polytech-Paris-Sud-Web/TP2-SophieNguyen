@@ -17,5 +17,3 @@ RUN npm run build
 FROM nginx:stable-alpine as production-stage
 COPY --from=build-stage /app/dist/simple-app /usr/share/nginx/html
 EXPOSE 80 443
-
-# TODO: Setup HTTPS

@@ -6,6 +6,7 @@ services:
       context: .
     ports:
       - "80:80"
+      - "443:443"
     restart: always
   db:
     image: clue/json-server
