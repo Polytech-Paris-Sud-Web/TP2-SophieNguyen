@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  app:
+    container_name: blog
+    image: ghcr.io/polytech-paris-sud-web/tp2-sophienguyen
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+  db:
+    image: clue/json-server
+    container_name: blog-db
+    volumes:
+      - ./db/db.json:/data/db.json
+    ports:
+      - "3000:80"
+    restart: always
