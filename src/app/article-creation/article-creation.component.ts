@@ -6,6 +6,7 @@ import {AuthorService} from "../author.service";
 import {Subscription} from "rxjs";
 import {Author} from "../author/author";
 import {ArticleCreation} from "./article-creation";
+import {Meta} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-article-creation',
@@ -23,7 +24,12 @@ export class ArticleCreationComponent implements OnInit, OnDestroy {
   /** Author select dropdown values */
   authors: Author[] = [];
 
-  constructor(private fb: FormBuilder, private articleService: ArticleService, private authorService: AuthorService, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private articleService: ArticleService,
+    private authorService: AuthorService,
+    private router: Router,
+    private meta: Meta) {
     this.articleForm = this.fb.group({
       title: ['Fake Title', Validators.required ],
       content: ['', Validators.required ],
@@ -33,6 +39,11 @@ export class ArticleCreationComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.feedAuthors();
+
+    this.meta.updateTag({
+      name: "description",
+      description: "Write an article full of interesting facts about the life with our form"
+    });
   }
 
   /**

@@ -37,15 +37,11 @@ export class ArticleComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.fromRoute = /\/articles\/.+/g.test(this.router.url);
+    this.updateTag();
 
     const id = Number(/^\/articles\/(\d+)(?<!\D)$/g.exec(this.router.url)?.[1]);
     if (id) {
       this.fetch(id);
-
-      this.meta.addTag({
-        name: this.article?.title,
-        description: ""
-      });
     }
   }
 
@@ -56,6 +52,17 @@ export class ArticleComponent implements OnInit, OnDestroy {
     return this.fromRoute;
   }
 
+  updateTag(): void {
+    if (!this.isReadonly())
+      return;
+
+    this.meta.updateTag({
+      name: "description",
+      description: this.article ? (this.article.content.length > 250 ? this.article.content.substring(0, 250) + "..." : this.article.content)
+        : "Your article does not exist anywhere..."
+    });
+  }
+
   /**
    * Fetch current article data
    *
@@ -63,7 +70,10 @@ export class ArticleComponent implements OnInit, OnDestroy {
    */
   fetch(id: number): void {
     this.fetchSubscription = this.articleService.getArticle(id).subscribe({
-      next: (data) => this.article = data
+      next: (data) => {
+        this.article = data;
+        this.updateTag();
+      }
     });
   }
 
