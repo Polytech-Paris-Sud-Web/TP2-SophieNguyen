@@ -77,7 +77,7 @@ jobs:
           script: |
             echo "Login to GitHub container registry..."
             echo $CR_TOKEN >> password.txt
-            cat password.txt | docker login $CR_REGISTRY --username $CR_USERNAME --password-stdin
+            cat password.txt | docker login $REGISTRY --username $CR_USERNAME --password-stdin
             rm -f password.txt
             cd app
             docker compose down
