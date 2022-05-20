@@ -32,7 +32,7 @@
       "name": "api",
       "urls": [
         "http://localhost:3000/**",
-        "./api/**"
+        "https://app.some-very-furtive.blog/api/**"
       ],
       "cacheConfig": {
         "strategy": "performance",
