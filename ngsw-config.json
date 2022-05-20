@@ -35,7 +35,7 @@
         "https://app.some-very-furtive.blog/api/**"
       ],
       "cacheConfig": {
-        "strategy": "performance",
+        "strategy": "freshness",
         "maxSize": 20,
         "maxAge": "10d"
       }
