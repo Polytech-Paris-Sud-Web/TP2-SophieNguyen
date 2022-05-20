@@ -29,5 +29,6 @@ services:
     restart: always
     networks:
       - blog-network
+    command: --watch
 networks:
   blog-network:
