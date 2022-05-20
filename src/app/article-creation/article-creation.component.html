@@ -4,16 +4,16 @@
   <form [formGroup]="articleForm" (ngSubmit)="createArticle()">
     <div class="form-group">
       <p class="field-group">
-        <label>Title</label>
-        <input class="form-control" formControlName="title">
+        <label for="title">Title</label>
+        <input id="title" class="form-control" formControlName="title">
       </p>
       <p class="field-group">
-        <label>Content</label>
-        <textarea class="form-control" formControlName="content"></textarea>
+        <label for="content">Content</label>
+        <textarea id="content" class="form-control" formControlName="content"></textarea>
       </p>
       <p class="field-group">
-        <label class="center-block">Author</label>
-        <select formControlName="authorId">
+        <label for="author">Author</label>
+        <select id="author" formControlName="authorId">
           <option *ngFor="let author of authors" [ngValue]="author.id">{{ author.name }}</option>
         </select>
       </p>
