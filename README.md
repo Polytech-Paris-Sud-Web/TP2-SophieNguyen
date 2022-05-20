@@ -1,7 +1,14 @@
 # TP2 - Advanced web development
 
+> **URL** : [https://app.some-very-furtive.blog](https://app.some-very-furtive.blog)
+
 Again, I have helped Tom Mansion, Léandre Becq, Rémy Chagnas and Nathan Pinault.
 And these gentle guys helped me too!
+
+## Notes
+
+For HTTPS setup on my VPS, I have followed the instructions in [nginx-certbot boilerplate](https://github.com/wmnnd/nginx-certbot). 
+Organization and init script had been changed a bit to match with my configuration. You can find some of the files in `config` folder.
 
 ---
 
@@ -12,10 +19,10 @@ And these gentle guys helped me too!
 #### With Service Worker enabled
 
 ```bash
-ng build
+ng build --configuration development
 ```
 
-Then set up a server using `http-server` :
+Then set up a server using `http-server` on generated `/dist/simple-app` folder :
 
 ```bash
 http-server -p {port} -c-1 dist/simple-app/
