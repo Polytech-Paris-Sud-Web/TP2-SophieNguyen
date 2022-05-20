@@ -9,7 +9,9 @@ Loreleï Augeraud and Tom Ravanel gave me a hand for some minor Lighthouse issue
 
 Apparently, it works (luckily? Hmm... Don't say that).
 
-![](capture.png)
+![](img/capture.png)
+
+*Tested on Google Chrome browser (version : `100.0.4896.88`)*
 
 ## Notes
 
