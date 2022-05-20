@@ -8,7 +8,8 @@ And these gentle guys helped me too!
 Loreleï Augeraud and Tom Ravanel gave me a hand for some minor Lighthouse issues.
 
 Apparently, it works (luckily? Hmm... Don't say that).
-![capture.png](capture.png)
+
+![](capture.png)
 
 ## Notes
 
