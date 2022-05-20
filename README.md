@@ -7,7 +7,7 @@ And these gentle guys helped me too!
 
 Loreleï Augeraud and Tom Ravanel gave me a hand for some minor Lighthouse issues.
 
-Apparently, it works (luckily? Hmm... Don't say that).
+Apparently, it works perfectly in desktop mode (luckily? Hmm... Don't say that).
 
 ![](img/capture.png)
 
