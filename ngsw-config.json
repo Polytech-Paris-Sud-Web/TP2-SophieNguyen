@@ -31,8 +31,8 @@
     {
       "name": "api",
       "urls": [
-        "/authors",
-        "/articles"
+        "http://localhost:3000/**",
+        "./api/**"
       ],
       "cacheConfig": {
         "strategy": "performance",
