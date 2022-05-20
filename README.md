@@ -5,10 +5,15 @@
 Again, I have helped Tom Mansion, Léandre Becq, Rémy Chagnas and Nathan Pinault.
 And these gentle guys helped me too!
 
+Loreleï Augeraud and Tom Ravanel gave me a hand for some minor Lighthouse issues.
+
+Apparently, it works (luckily? Hmm... Don't say that).
+![capture.png](capture.png)
+
 ## Notes
 
 For HTTPS setup on my VPS, I have followed the instructions in [nginx-certbot boilerplate](https://github.com/wmnnd/nginx-certbot). 
-Organization and init script had been changed a bit to match with my configuration. You can find some of the files in `config` folder.
+Organization and init script had been changed a bit to match with my configuration. You can find some of the files in `config` folder. They are not managed by CD but directly on VPS.
 
 ---
 
