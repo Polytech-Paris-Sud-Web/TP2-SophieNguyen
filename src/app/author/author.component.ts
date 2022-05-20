@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import { Subscription } from "rxjs";
 import { AuthorService } from "../author.service";
-import { Router } from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import { Author } from "./author";
 import {Meta} from "@angular/platform-browser";
 
@@ -19,11 +19,13 @@ export class AuthorComponent implements OnInit, OnDestroy {
   private authorSub: Subscription | undefined;
   /** Current author */
   author: Author | undefined;
+  error: string | undefined;
 
-  constructor(private authorService: AuthorService, private router: Router, private meta: Meta) { }
+  constructor(private authorService: AuthorService, private router: Router, private route: ActivatedRoute, private meta: Meta) { }
 
   ngOnInit(): void {
-    const id = Number(/^\/authors\/(\d+)(?<!\D)$/g.exec(this.router.url)?.[1]);
+    const id = Number(this.route.snapshot.paramMap.get("id"));
+
     this.updateTag();
 
     if (id) {
@@ -45,12 +47,12 @@ export class AuthorComponent implements OnInit, OnDestroy {
    * @param id Current author identifier
    */
   fetch(id: number) {
-    this.authorSub = this.authorService.getAuthor(id).subscribe({
-      next: (data) => {
+    this.authorSub = this.authorService.getAuthor(id).subscribe(
+      (data) => {
         this.author = data;
         this.updateTag();
-      }
-    });
+      },
+    );
   }
 
   ngOnDestroy(): void {

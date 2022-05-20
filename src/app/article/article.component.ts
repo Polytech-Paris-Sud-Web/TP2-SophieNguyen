@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {Article} from "./article";
 import {ArticleService} from "../article.service";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Subscription} from "rxjs";
 import {Meta} from "@angular/platform-browser";
 
@@ -18,36 +18,33 @@ import {Meta} from "@angular/platform-browser";
  * @see ArticlesComponent
  */
 export class ArticleComponent implements OnInit, OnDestroy {
-  /** Observable execution for fetching data */
   private fetchSubscription: Subscription | undefined;
-  /** Observable execution for removing article */
   private deleteSubscription: Subscription | undefined;
+
   private fromRoute: boolean = false;
 
-  /** Current article */
   @Input()
   article: Article | undefined;
 
-  /** Emit an event to parent (if the component is used this way) to order refresh */
   @Output()
   deletedArticle: EventEmitter<any> = new EventEmitter();
 
-  constructor(private articleService: ArticleService, private router: Router, private meta: Meta) {
+  constructor(private articleService: ArticleService, private router: Router, private route: ActivatedRoute, private meta: Meta) {
   }
 
   ngOnInit(): void {
-    this.fromRoute = /\/articles\/.+/g.test(this.router.url);
+    const paramId = this.route.snapshot.paramMap.get("id");
+    this.fromRoute = Boolean(paramId);
+
+    const id = Number(paramId);
+
     this.updateTag();
 
-    const id = Number(/^\/articles\/(\d+)(?<!\D)$/g.exec(this.router.url)?.[1]);
     if (id) {
       this.fetch(id);
     }
   }
 
-  /**
-   * Check if the component is used to show an article or by a parent component
-   */
   isReadonly(): boolean {
     return this.fromRoute;
   }
@@ -73,7 +70,7 @@ export class ArticleComponent implements OnInit, OnDestroy {
       next: (data) => {
         this.article = data;
         this.updateTag();
-      }
+      },
     });
   }
 
@@ -89,7 +86,8 @@ export class ArticleComponent implements OnInit, OnDestroy {
             this.router.navigate(['/articles']);
           else
             this.deletedArticle.emit();
-        }
+        },
+        error: () => alert("Error occurred when trying to remove article...")
       })
   }
 

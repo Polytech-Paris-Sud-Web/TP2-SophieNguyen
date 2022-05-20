@@ -51,7 +51,8 @@ export class ArticleCreationComponent implements OnInit, OnDestroy {
    */
   feedAuthors() {
     this.authorSubscription = this.authorService.getAuthors().subscribe({
-      next: (data) => this.authors = data
+      next: (data) => this.authors = data,
+      error: () => alert("Authors could not be fetched...")
       }
     )
   }
@@ -65,6 +66,7 @@ export class ArticleCreationComponent implements OnInit, OnDestroy {
 
     this.articleService.createArticle(article).subscribe({
       next: () => { alert("Article published successfully!"); this.router.navigate(['/articles']); },
+      error: () => alert("Error occurred when publishing your wondrous article. Sorry not sorry.")
     });
   }
 
