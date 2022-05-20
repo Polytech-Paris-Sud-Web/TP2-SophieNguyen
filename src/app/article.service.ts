@@ -31,6 +31,6 @@ export class ArticleService {
   }
 
   public createArticle(article: ArticleCreation): Observable<any> {
-    return this.http.post(`http://localhost:3000/articles`, article);
+    return this.http.post(`${this.baseUrl}/articles`, article);
   }
 }
