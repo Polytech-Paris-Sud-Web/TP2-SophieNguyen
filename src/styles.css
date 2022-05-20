@@ -71,6 +71,7 @@ button:disabled {
 }
 
 .page-content h2 {
+  word-break: break-all;
   color: rgb(var(--main));
   border-radius: 5px;
   outline: 3px solid rgb(var(--secondaryDark));
@@ -84,6 +85,8 @@ button:disabled {
 .content {
   text-align: justify;
   white-space: pre-line;
+  hyphens: auto;
+  word-break: break-word;
 }
 
 /** Simple links */
