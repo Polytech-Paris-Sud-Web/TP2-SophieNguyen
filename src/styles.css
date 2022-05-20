@@ -32,7 +32,7 @@ button {
   border-radius: 5px;
   box-shadow: 3px 3px 0 rgb(var(--main));
   text-transform: uppercase;
-  padding: 5px;
+  padding: 5px 10px 10px 10px;
   background-color: rgb(var(--dark));
   color: rgb(var(--main));
   font-family: "Fira Code", monospace;
