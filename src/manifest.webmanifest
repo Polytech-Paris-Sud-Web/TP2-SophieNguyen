@@ -1,8 +1,8 @@
 {
-  "name": "simple-app",
-  "short_name": "simple-app",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Very furtive blog",
+  "short_name": "Furtive",
+  "theme_color": "#306230",
+  "background_color": "#9BBC0F",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
